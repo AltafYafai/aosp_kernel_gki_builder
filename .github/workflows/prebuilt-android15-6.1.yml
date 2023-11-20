@@ -6,7 +6,7 @@ on:
 
 jobs:
 
-  PREBUILT_A14_6_1_LTS:
+  PREBUILT_A15_6_1_LTS:
     runs-on: ubuntu-latest
     steps:
       - name: "👨‍🔧 Setup build environment"
@@ -15,7 +15,7 @@ jobs:
         run: repo init -u https://gitlab.com/xprateek/kernel_manifest -b common-android15-6.1 --depth=1 && repo sync && tools/bazel build --config=fast //common:kernel_aarch64_dist
       - name: "📄 Generating Release Tag"
         id: tag
-        run: echo "release_tag=xprateek/PREBUILT_A14-6.1-$(date +"%Y.%m.%d")" >> $GITHUB_OUTPUT
+        run: echo "release_tag=xprateek/PREBUILT_A15-6.1-$(date +"%Y.%m.%d")" >> $GITHUB_OUTPUT
       - name: "🗃️ Create Release"
         uses: softprops/action-gh-release@v1
         with:
@@ -26,7 +26,7 @@ jobs:
           repository: xprateek/aosp_kernel_gki_builder
           TOKEN: ${{ secrets.TOKEN }}
 
-  PREBUILT_A14_6_1_LTS_KSU:
+  PREBUILT_A15_6_1_LTS_KSU:
     runs-on: ubuntu-latest
     steps:
       - name: "👨‍🔧 Setup build environment"
@@ -35,7 +35,7 @@ jobs:
         run: repo init -u https://gitlab.com/xprateek/kernel_manifest -b common-android15-6.1 --depth=1 && repo sync && cd common && curl -LSs "https://raw.githubusercontent.com/tiann/KernelSU/main/kernel/setup.sh" | bash - && cd ../ && tools/bazel build --config=fast //common:kernel_aarch64_dist
       - name: "📄 Generating Release Tag"
         id: tag
-        run: echo "release_tag=xprateek/PREBUILT_A14-6.1_KSU-$(date +"%Y.%m.%d")" >> $GITHUB_OUTPUT
+        run: echo "release_tag=xprateek/PREBUILT_A15-6.1_KSU-$(date +"%Y.%m.%d")" >> $GITHUB_OUTPUT
       - name: "🗃️ Create Release"
         uses: softprops/action-gh-release@v1
         with:
