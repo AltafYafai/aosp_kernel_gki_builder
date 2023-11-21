@@ -29,3 +29,8 @@
 | **android14-6.1** | [![🏗️ BUILD ANDROID14-6.1](https://github.com/xprateek/aosp_kernel_gki_builder/actions/workflows/build-android14-6.1.yml/badge.svg)](https://github.com/xprateek/aosp_kernel_gki_builder/actions/workflows/build-android14-6.1.yml) | [![🏗️ BUILD ANDROID14-6.1-LTS](https://github.com/xprateek/aosp_kernel_gki_builder/actions/workflows/build-android14-6.1-lts.yml/badge.svg)](https://github.com/xprateek/aosp_kernel_gki_builder/actions/workflows/build-android14-6.1-lts.yml) |
 | **android15-6.1** | [![🏗️ BUILD ANDROID15-6.1](https://github.com/xprateek/aosp_kernel_gki_builder/actions/workflows/build-android15-6.1.yml/badge.svg)](https://github.com/xprateek/aosp_kernel_gki_builder/actions/workflows/build-android15-6.1.yml) |     |
 |     |     |     |
+
+#### TODO
+<pre>
+  -- Update Scripts / added support build bazel (Android 13+)
+</pre>
