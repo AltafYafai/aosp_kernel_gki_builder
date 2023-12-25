@@ -1,4 +1,4 @@
-name: 🏗️ PREBUILT_A12-5.10-LTS-dev
+name: 1.🏗️ PREBUILT_A12-5.10-LTS-dev
 on:
   schedule:
     - cron: "59 23 * * SUN"
